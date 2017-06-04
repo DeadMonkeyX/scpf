@@ -33,5 +33,10 @@ else
     localdir=$3
 fi
 
+# If local folder does not exist create it
+if [ ! -d "$localdir" ]; then
+    mkdir -p "$localdir"
+fi
+
 # Do the magic string
-$SSH $host "cd $remotedir; tar cf - ." | $TAR xfv - -C $localdir
+$SSH $host "cd $remotedir; tar cf - ." | $TAR xfv - -C "$localdir"
