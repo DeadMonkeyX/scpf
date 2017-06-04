@@ -34,4 +34,4 @@ else
 fi
 
 # Do the magic string
-$SSH $host "cd $remotedir; tar cf - ." | $TAR xfv
+$SSH $host "cd $remotedir; tar cf - ." | $TAR xfv - -C $localdir
