@@ -1,9 +1,10 @@
-# scpf #
->Copy folders over ssh like a crazy maniac.
-
-Most *nix users knows that scp is verry good for files, but like every other utility it does 1 file at a time.
-However what about a webfolder with 9999 files - that would take an insane amout of time to download.
-This is what I aim to solve with scpf.
+## scpf  - Copy folders over ssh like a crazy maniac.
+>Copying files from server to client in *nix is often done with scp or sftp.
+>
+>However most ppl knows that if they are going to download the whole webfolder it would take about 1 hour ++
+> 
+> This is what i aim to solve with scpf 
+> 
 
 ### Requirements ###
 * Bash
