@@ -17,3 +17,8 @@ git clone https://bitbucket.org/dm0nk/scpf /tmp/scpf
 cp /tmp/scpf/scpf /usr/local/bin/scpf
 chmod +x /usr/local/bin/scpf
 ```
+
+### Usage ###
+``` bash
+scpf user@host.tcl /fullPath/To/RemoteDirectory /fullPath/To/LocalDirectory
+```
