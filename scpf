@@ -6,7 +6,7 @@ SSH=$(which ssh)
 TAR=$(which tar)
 
 # Help check
-if [ $1 = "help" ]; then
+if [[ $1 = "help" ]]; then
     echo "Usage: $0 username@remoteHost remoteDirectory localDirectory"
     exit
 fi
