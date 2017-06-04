@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#
+# By dm0nk 2017
+
+SSH=$(which ssh)
+TAR=$(which tar)
+
+# Help check
+if [ $1 = "help" ]; then
+    echo "Usage: $0 username@remoteHost remoteDirectory localDirectory"
+    exit
+fi
+
+# If the user did not provide the params, let me ask for it.
+if [ -z ${1+x} ]; then
+    echo -n "Enter ssh user@host string: "
+    read host
+else
+    host=$1
+fi
+
+if [ -z ${2+x} ]; then
+    echo -n "Enter remote directory: "
+    read remotedir
+else
+    remotedir=$2
+fi
+
+if [ -z ${3+x} ]; then
+    echo -n "Enter local directory: "
+    read localdir
+else
+    localdir=$3
+fi
+
+# Do the magic string
+$SSH $host "cd $remotedir; tar cf - ." | $TAR xfv
